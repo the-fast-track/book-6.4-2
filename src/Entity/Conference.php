@@ -70,9 +70,7 @@ class Conference
 
     public function computeSlug(SluggerInterface $slugger)
     {
-        if (!$this->slug || '-' === $this->slug) {
-            $this->slug = (string) $slugger->slug((string) $this)->lower();
-        }
+        $this->slug = (string) $slugger->slug((string) $this)->lower();
     }
 
     public function getCity(): ?string
